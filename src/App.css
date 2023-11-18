@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;    
+}
+
+body{
+    background-image:url('../src/assets/Blue\ Yellow\ And\ White\ Playful\ Illustrative\ Quiz\ Time\ Instagram\ Post.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
