@@ -5,6 +5,7 @@ const ButtonPlay = (props) => {
   return (
     <>
       <div onClick={props.onClick} className={style.wrapper}>
+        
         <a className={style.cta} href="#">
           <span>PLAY</span>
           <span>

@@ -10,6 +10,7 @@ var data = [
       E: "{4, 6, 8, 12, 14, 16}"
     },
     respostaCorreta: "B",
+    explicacao:  "Dado A U B = {1, 2, 4, 6, 8, 10, 12, 14, 16}\n\n A - B = {1, 2, 10} e A ∩ B = {6, 8, 16}\n\n Queremos determinar B: \n\nRemovendo os elementos de A que estão em B:\n \n({6, 8, 16})\n\n De todos os elementos de B\n Obtemos B = {1, 2, 10, 16}. \n\nPortanto, a resposta correta é B.",
   },
   {
     pergunta:
@@ -22,6 +23,7 @@ var data = [
       E: "{3, 6}",
     },
     respostaCorreta: "B",
+    explicacao: "A representa o conjunto dos elementos \n{1, 2, 3, 4, 5}.\n\nB representa o conjunto dos elementos \n{3, 4, 5, 6, 7}.\n\nA interseção de A e B (A∩B) consiste nos elementos que estão presentes em ambos os conjuntos.\n\n Neste caso, os elementos comuns a A e B são {3, 4, 5}.\n\nPortanto, a resposta correta é a opção B: A∩B = {3, 4, 5}."
   },
   {
     pergunta:
@@ -34,6 +36,7 @@ var data = [
       E: "A é o complemento de B",
     },
     respostaCorreta: "D",
+    explicacao: "Se A∩B é um conjunto vazio ({}), significa que não há nenhum elemento em comum entre A e B.\n\nQuando A∩B = {}, dizemos que A e B são conjuntos disjuntos.\n\n A resposta correta é a opção D."
   },
   {
     pergunta: "Se A ∩ B = A, o que podemos concluir sobre os conjuntos A e B?",
@@ -45,6 +48,7 @@ var data = [
       E: "A é o complemento de B",
     },
     respostaCorreta: "B",
+    explicacao: "A∩B representa a interseção (elementos que tem nos dois).\n\nSe A∩B = A, isso significa que todos os elementos que estão em A também estão em B.  \n\n B é um subconjunto de A.\n\nA resposta correta é a opção B."
   },
   {
     pergunta:
@@ -57,6 +61,8 @@ var data = [
       E: "{}",
     },
     respostaCorreta: "C",
+    explicacao: "A é o conjunto dos números primos de 1 a 10, então, os números que têm apenas dois divisores: 1 e o próprio número.\n\nA = {2, 3, 5, 7}.\n\nB é o conjunto dos números pares de 1 a 10, ou seja, aqueles que são divisíveis por 2. Assim, \n\nB = {2, 4, 6, 8, 10}.\n\nO único número que está presente em ambos A e B é o número 2.\n\nNeste caso a resposta correta é a opção C."
+
   },
 ];
 

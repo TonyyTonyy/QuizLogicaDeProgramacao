@@ -1,25 +1,41 @@
 .mainContainer {
- flex: 0;
- display: flex;
- justify-content: center;
- align-items: center;
-
+  flex: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .QuestionContainer {
-  background-image: url('../../assets/BasePergunta.png');
+  background-image: url("../../assets/BasePergunta.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  justify-content: center;  
   width: 550px;
   height: 400px;
   margin-top: 40px;
   position: relative;
-  font-size: 10px;
+  font-size: 9px;
   padding-top: 170px;
   padding-right: 70px;
   padding-left: 70px;
   color: white;
-text-align: center;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.imagem {
+  margin-top: 10px;
+}
+.IntegrantesContainer {
+  display: flex;
+  font-size: 16px;
+  gap: 30px;
+  padding: 9px;
+}
+.TextoIntegrante {
+  text-align: start;
 }
 
+.pontuacao {
+  font-size: 42px;  
+  
+}

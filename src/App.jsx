@@ -4,15 +4,24 @@ import { useState } from "react";
 import HeaderQuestion from "./components/HeaderQuestion";
 import ButtonPlay from "./components/ButtonPlay";
 import QuestionCard from "./components/QuestionCard";
+import ModalIncorrectQuestion from "./components/ModalIncorrectQuestion";
 
 function App() {
   const [question, setQuestion] = useState(-1);
   const [pontos, setPontos] = useState(0);
+  const [color, setColor] = useState(["", "", "", "", ""]);
+  const [showModal, setShowModal] = useState(false);
 
   if (question < 0) {
     return (
       <div className="container">
-        <HeaderQuestion />
+        <HeaderQuestion
+          integrantes={[
+            "Tony Cleriston",
+            "Gabriel Torres",
+            "Vinicius Cerqueira",
+          ]}
+        />
         <ButtonPlay onClick={() => setQuestion(0)} />
       </div>
     );
@@ -20,19 +29,51 @@ function App() {
     return (
       <div className="container">
         <HeaderQuestion question={data[question].pergunta} />
-        {Object.entries(data[question].alternativas).map((altern) => {
+        {Object.entries(data[question].alternativas).map((altern, index) => {
           return (
             <div>
               <QuestionCard
+                key={altern[0]}
                 alternativa={altern[0]}
                 resposta={altern[1]}
-                onClick={() => {
+                color={color[index]}
+                onClick={async () => {
                   if (altern[0] === data[question].respostaCorreta) {
+                    setColor(
+                      color.map((_, i) => (i === index ? "rgb(12 208 43)" : ""))
+                    );
+                    await new Promise((resolve) => setTimeout(resolve, 1000));
+                    setColor(color.map((_) => ""));
                     setPontos(pontos + 1);
+                    setQuestion(question + 1);
+                  } else {
+                    setColor(
+                      color.map((_, i) => {
+                        if (i === index) {
+                          return "red";
+                        } else if (
+                          data[question].respostaCorreta ===
+                          Object.entries(data[question].alternativas)[i][0]
+                        ) {
+                          return "rgb(12 208 43)";
+                        }
+                        return "";
+                      })
+                    );
+                    setShowModal(true);
                   }
-                  setQuestion(question + 1);
                 }}
               />
+              {showModal && (
+                <ModalIncorrectQuestion
+                  explicacao={data[question].explicacao}
+                  onClick={() => {
+                    setQuestion(question + 1);
+                    setShowModal(false);
+                    setColor(color.map((_) => ""));
+                  }}
+                />
+              )}
             </div>
           );
         })}
@@ -41,7 +82,7 @@ function App() {
   } else {
     return (
       <div className="container">
-        <HeaderQuestion question={`Pontuação: ${pontos}/5`} />
+        <HeaderQuestion pontuacao={`Pontuação: ${pontos}/5`} />
         <ButtonPlay
           onClick={() => {
             setQuestion(0);
