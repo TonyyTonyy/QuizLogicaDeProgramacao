@@ -12,7 +12,7 @@
 }
 
 body{
-    background-image:url('../src/assets/Blue\ Yellow\ And\ White\ Playful\ Illustrative\ Quiz\ Time\ Instagram\ Post.png') ;
+    background-image:url('../public/Background.png') ;
     background-repeat: no-repeat;
     background-size: cover;
 }
