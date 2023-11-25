@@ -28,12 +28,11 @@ function App() {
   } else if (data.length > question) {
     return (
       <div className="container">
-        <HeaderQuestion question={data[question].pergunta} />
+        <HeaderQuestion question={data[question].pergunta} key={data[question].pergunta}/>
         {Object.entries(data[question].alternativas).map((altern, index) => {
           return (
-            <div>
+            <div key={altern[0]}>
               <QuestionCard
-                key={altern[0]}
                 alternativa={altern[0]}
                 resposta={altern[1]}
                 color={color[index]}
@@ -66,6 +65,7 @@ function App() {
               />
               {showModal && (
                 <ModalIncorrectQuestion
+                  keyModal={data[question].explicacao}
                   explicacao={data[question].explicacao}
                   onClick={() => {
                     setQuestion(question + 1);

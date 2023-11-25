@@ -56,3 +56,9 @@
     font-size: 20px;
     font-weight: 700;
   }
+  @media (max-width: 768px) {
+    .modalContent{
+       white-space: pre-line;
+  word-wrap: break-word;
+    }
+  }

@@ -1,11 +1,10 @@
 import React from "react";
 import style from "./style.module.css";
-const QuestionCard = (props) => {
 
+const QuestionCard = (props) => {
   return (
     <>
       <div
-        key={props.key}
         onClick={props.onClick}
         className={`${style.mainContainer}`}
         style={{ backgroundColor: props.color }}

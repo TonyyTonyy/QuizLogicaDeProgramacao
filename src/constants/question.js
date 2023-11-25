@@ -1,7 +1,7 @@
 var data = [
   {
     pergunta:
-      "Dado o conjunto A e B, temos que A U B = {1, 2, 4, 6,8, 10, 12, 14, 16}, que A - B = {1, 2, 10}, e que A ∩ B = {6, 8, 16}, assim, o conjunto B é igual a:",
+      "Dado o conjunto A e B, temos que A U B = {1, 2, 4, 6, 8, 10, 12, 14, 16}, que A - B = {1, 2, 10}, e que A ∩ B = {6, 8, 16}, assim, o conjunto B é igual a:",
     alternativas: {
       A: "{1, 2, 6, 8, 10, 16}",
       B: "{1, 2, 10, 16}",
@@ -9,8 +9,8 @@ var data = [
       D: "{12, 4, 8, 10, 12, 14}",
       E: "{4, 6, 8, 12, 14, 16}"
     },
-    respostaCorreta: "B",
-    explicacao:  "Dado A U B = {1, 2, 4, 6, 8, 10, 12, 14, 16}\n\n A - B = {1, 2, 10} e A ∩ B = {6, 8, 16}\n\n Queremos determinar B: \n\nRemovendo os elementos de A que estão em B:\n \n({6, 8, 16})\n\n De todos os elementos de B\n Obtemos B = {1, 2, 10, 16}. \n\nPortanto, a resposta correta é B.",
+    respostaCorreta: "E",
+    explicacao:  "Dado A U B = {1, 2, 4, 6, 8, 10, 12, 14, 16}\n\n A - B = {1, 2, 10} e A ∩ B = {6, 8, 16}\n\n Queremos determinar B: \n\nObservando os numeros da interseccão e os elementos que não fazem parte do A - B são eles:\n \n({4, 6, 8, 12, 14, 16}) \n\nPortanto, a resposta correta é E.",
   },
   {
     pergunta:
@@ -47,8 +47,8 @@ var data = [
       D: "A e B são conjuntos disjuntos",
       E: "A é o complemento de B",
     },
-    respostaCorreta: "B",
-    explicacao: "A∩B representa a interseção (elementos que tem nos dois).\n\nSe A∩B = A, isso significa que todos os elementos que estão em A também estão em B.  \n\n B é um subconjunto de A.\n\nA resposta correta é a opção B."
+    respostaCorreta: "A",
+    explicacao: "A∩B representa a interseção (elementos que tem nos dois).\n\nSe A∩B = A, isso significa que todos os elementos que estão em A também estão em B.  \n\n A é um subconjunto de B.\n\nA resposta correta é a opção A."
   },
   {
     pergunta:

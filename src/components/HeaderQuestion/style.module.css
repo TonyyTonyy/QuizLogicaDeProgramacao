@@ -36,6 +36,32 @@
 }
 
 .pontuacao {
-  font-size: 42px;  
+  font-size:40px;  
+  
+}
+@media (max-width: 768px) {
+  .imagem {
+    width: 100px; 
+    height: 30px;
+    margin-top: 20px;
+  }
+ .QuestionContainer{
+  width: 400px;
+  height: 270px;
+  font-size: 8px;
+  padding-top: 115px;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-top: 0px;
+ }
+
+
+ .QuestionContainer h1{
+  font-size: 14px;
+ }
+ 
+  .pontuacao {
+    font-size: 30px;
+  }
   
 }
